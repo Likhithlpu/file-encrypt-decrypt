@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption and Decryption</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        p4 {
+            text-align: center;
+            color: #555;
+        }
+
+        .geography {
+            text-align: center;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        input[type="button"] {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #218838;
+        }
+
+        #exitButton {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #exitButton:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>ENCRYPTION AND DECRYPTION<img src="lock%202.png"></h1>
+<p4>Enter the file below</p4>
+<div class="geography">
+    <input type="file" id="fileInput" style="display:none;">
+    <input type="button" value="Open File" onclick="document.getElementById('fileInput').click();">
+    <input type="button" id="exitButton" value="Exit" onclick="window.close();">
+</div>
+
+<script>
+    document.getElementById('fileInput').addEventListener('change', function() {
+        var file = this.files[0];
+        // Do something with the selected file
+        console.log(file);
+    });
+</script>
+
+</body>
+</html>
